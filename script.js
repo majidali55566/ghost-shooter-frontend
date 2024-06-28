@@ -212,7 +212,7 @@ function displayTopScores(scores) {
     scoreElement.className = "score";
 
     let scoreParagraph = document.createElement("h1");
-    scoreParagraph.innerText = `${score.rollno}: ${score.score}`;
+    scoreParagraph.innerText = `${userId.rollno}: ${scores.score}`;
 
     scoreElement.appendChild(scoreParagraph);
     scoresContainer.appendChild(scoreElement);
