@@ -60,9 +60,21 @@
         <div id="main-menu2" class="main-menu">Main Menu</div>
       </div>
 
-      <div id="quitScreen">
+      <div id="quitScreen" style="position: relative">
         <h3>Tap To Start</h3>
-        <div id="top-score-container"></div>
+        <div
+          id="top-score-container"
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            backdrop-filter: blur(10px);
+          "
+        >
+          <h2>Top scorers</h2>
+        </div>
 
         <br />
       </div>
