@@ -66,6 +66,7 @@ hardBtn.onclick = function () {
 };
 
 quitBtn.onclick = function () {
+  fetchTopScores();
   quitScreen.style.display = "flex";
   difficultyMenu.style.display = "none";
   gameWinScreen.style.display = "none";
@@ -221,6 +222,3 @@ function displayTopScores(scores) {
     scoresContainer.appendChild(scoreElement);
   });
 }
-
-// Call fetchTopScores when the game loads
-fetchTopScores();
