@@ -82,6 +82,7 @@ mainMenuBtn2.onclick = function () {
   // gameWinScreen.style.display = "none";
   gameOverScreen.style.display = "none";
   menu.style.display = "flex";
+    
 };
 
 quitScreen.onclick = function () {
@@ -147,7 +148,7 @@ function startGame() {
           for (let ghost of ghosts) {
             ghost.remove();
           }
-          saveScore(score); // Save score when the game is over
+        saveScore(score); // Save score when the game is over
         }
       } else if (score == maxScore) {
         clearInterval(ghostCreate);
@@ -170,12 +171,14 @@ function startGame() {
 }
 
 function saveScore(score) {
+ 
   const rollno = localStorage.getItem("rollno"); // You might want to dynamically get this based on the logged-in user
-
+  console.log(rollno);
   fetch(`https://scoreapi-z32i.onrender.com/api/scores/submit/${rollno}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+     
     },
     body: JSON.stringify({ score }),
   })
