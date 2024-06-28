@@ -116,7 +116,7 @@ function startGame() {
   quitScreen.style.display = "none";
   let ghostCreate = setInterval(() => {
     let ghost = document.createElement("img");
-    ghost.src = "./assets/images/ghost.png";
+    ghost.src = "/assets/images/ghost.png";
     ghost.className = "ghost-icon";
     ghost.style.bottom = "0px";
     ghost.style.left = Math.random() * gameContainer.offsetWidth + "px";
