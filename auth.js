@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify(rollno, password),
+            body: JSON.stringify({ rollno, password }),
           }
         );
         const data = response.json();
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify(rollno, password),
+            body: JSON.stringify({ rollno, password }),
             credentials: true,
           }
         );
