@@ -51,6 +51,11 @@ body {
   position: absolute;
 }
 
+#profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 #game-menu,
 #difficulty-level-menu {
   width: 100%;
