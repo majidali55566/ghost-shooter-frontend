@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/webapp/:rollno/game.html"
+  from = "/:rollno/game.html"
   to = "/game.html"
   status = 200
 
