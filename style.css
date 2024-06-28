@@ -42,9 +42,9 @@ body {
   height: 100px;
 }
 .game-container-top {
-  width: 100%;
-  height: 60px;
+  padding: 1rem 2rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   color: #fff;
