@@ -195,6 +195,7 @@ function fetchTopScores() {
   })
     .then((response) => response.json())
     .then((data) => {
+      console.log("Top scores", data);
       displayTopScores(data);
     })
     .catch((error) => {
