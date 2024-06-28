@@ -1,9 +1,9 @@
 [[redirects]]
-  from = "/"
-  to = "/index.html"
+  from = "/webapp/:rollno/game.html"
+  to = "/game.html"
   status = 200
 
 [[redirects]]
-  from = "/:rollno/game.html"
-  to = "/game.html"
+  from = "/*"
+  to = "/index.html"
   status = 200
