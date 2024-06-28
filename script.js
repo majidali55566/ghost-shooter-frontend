@@ -205,7 +205,6 @@ function fetchTopScores() {
 
 function displayTopScores(scores) {
   let scoresContainer = document.getElementById("top-score-container");
-  scoresContainer.innerHTML = ""; // Clear existing scores
 
   scores.forEach((score) => {
     let scoreElement = document.createElement("div");
