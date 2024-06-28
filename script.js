@@ -147,6 +147,7 @@ function startGame() {
           for (let ghost of ghosts) {
             ghost.remove();
           }
+          saveScore(score); // Save score when the game is over
         }
       } else if (score == maxScore) {
         clearInterval(ghostCreate);
@@ -166,4 +167,24 @@ function startGame() {
 
     gameContainer.appendChild(ghost);
   }, 500);
+}
+
+function saveScore(score) {
+  const rollno = localStorage.getItem("rollno"); // You might want to dynamically get this based on the logged-in user
+
+  fetch(`https://scoreapi-z32i.onrender.com/api/scores/submit/${rollno}`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ score }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Score saved:", data);
+      alert("Last socre saved:", score);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 }

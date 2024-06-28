@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         if (response.ok) {
           localStorage.setItem("token", data.token);
+          localStorage.setItem("rollno", rollno); // Store rollno
           document.querySelector(".login-status").innerHTML =
             "Login successful!";
 
@@ -69,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (response.ok) {
           localStorage.setItem("token", data.token);
+          localStorage.setItem("rollno", rollno); // Store rollno
           window.location.href = `/${rollno}/game.html`;
           alert("Signup successful! Please login.");
         } else {
