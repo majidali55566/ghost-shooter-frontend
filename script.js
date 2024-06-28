@@ -208,6 +208,11 @@ function fetchTopScores() {
 function displayTopScores(scores) {
   let scoresContainer = document.getElementById("top-score-container");
 
+  // Clear previous scores
+  while (scoresContainer.firstChild) {
+    scoresContainer.removeChild(scoresContainer.firstChild);
+  }
+
   scores.forEach((score) => {
     let scoreElement = document.createElement("div");
     scoreElement.className = "top-score";
