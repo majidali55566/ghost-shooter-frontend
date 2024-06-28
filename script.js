@@ -204,13 +204,17 @@ function fetchTopScores() {
 }
 
 function displayTopScores(scores) {
-  let scoresContainer = document.getElementById("quitScreen");
+  let scoresContainer = document.getElementById("top-score-container");
   scoresContainer.innerHTML = ""; // Clear existing scores
 
   scores.forEach((score) => {
     let scoreElement = document.createElement("div");
     scoreElement.className = "score";
-    scoreElement.innerText = `${score.rollno}: ${score.score}`;
+
+    let scoreParagraph = document.createElement("h1");
+    scoreParagraph.innerText = `${score.rollno}: ${score.score}`;
+
+    scoreElement.appendChild(scoreParagraph);
     scoresContainer.appendChild(scoreElement);
   });
 }
