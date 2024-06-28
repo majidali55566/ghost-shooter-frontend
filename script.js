@@ -1,3 +1,9 @@
+const token = localStorage.getItem("token");
+
+if (!token) {
+  window.location.href = "./login.html";
+}
+
 let gameContainer = document.getElementById("gameContainer");
 let menu = document.getElementById("game-menu");
 let difficultyMenu = document.getElementById("difficulty-level-menu");
@@ -23,11 +29,6 @@ let setChance = 1;
 let setScore = 100;
 let speed = 50;
 
-const token = localStorage.getItem("token");
-
-if (!token) {
-  window.location.href = "./login.html";
-}
 gameStartBtn.onclick = function () {
   menu.style.display = "none";
   difficultyMenu.style.display = "none";

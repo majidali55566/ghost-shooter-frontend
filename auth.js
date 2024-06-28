@@ -9,9 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const rollno = loginForm.querySelector('input[name="username"]').value;
       const password = loginForm.querySelector('input[name="password"]').value;
-
       console.log(rollno + password);
-
       try {
         const response = await fetch(
           "https://scoreapi-z32i.onrender.com/api/users/login",
