@@ -209,10 +209,10 @@ function displayTopScores(scores) {
 
   scores.forEach((score) => {
     let scoreElement = document.createElement("div");
-    scoreElement.className = "score";
+    scoreElement.className = "top-score";
 
     let scoreParagraph = document.createElement("h1");
-    scoreParagraph.innerText = `${userId.rollno}: ${score.score}`;
+    scoreParagraph.innerText = `${score.userId.rollno}: ${score.score}`;
 
     scoreElement.appendChild(scoreParagraph);
     scoresContainer.appendChild(scoreElement);
