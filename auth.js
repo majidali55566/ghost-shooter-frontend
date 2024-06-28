@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({ rollno, password }),
-            credentials: true,
           }
         );
         const data = await response.json();
