@@ -3,6 +3,7 @@ const token = localStorage.getItem("token");
 if (!token) {
   window.location.href = "./login.html";
 }
+document.getElementById("user-name").innerHTML = localStorage.getItem("rollno");
 
 let gameContainer = document.getElementById("gameContainer");
 let menu = document.getElementById("game-menu");
