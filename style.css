@@ -156,7 +156,7 @@ ul li:hover .tooltiptext {
   background-image: url(assets/images/quit-screen.gif);
   color: #fff;
 }
-#{ } #quitScreen h3 {
+#quitScreen h3 {
   margin-bottom: 7%;
   animation: pulseAnimation 2s infinite;
   animation-fill-mode: forwards;
