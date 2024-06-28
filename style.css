@@ -45,7 +45,8 @@ body {
   padding: 1rem 2rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 100%;
   align-items: center;
   color: #fff;
   position: absolute;
