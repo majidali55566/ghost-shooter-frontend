@@ -1,8 +1,8 @@
-// const token = localStorage.getItem("token");
+const token = localStorage.getItem("token");
 
-// if (!token) {
-//   window.location.href = "./login.html";
-// }
+if (!token) {
+  window.location.href = "./login.html";
+}
 
 let gameContainer = document.getElementById("gameContainer");
 let menu = document.getElementById("game-menu");
@@ -82,6 +82,7 @@ mainMenuBtn2.onclick = function () {
   // gameWinScreen.style.display = "none";
   gameOverScreen.style.display = "none";
   menu.style.display = "flex";
+    saveScore(score); // Save score when the game is over
 };
 
 quitScreen.onclick = function () {
@@ -147,7 +148,7 @@ function startGame() {
           for (let ghost of ghosts) {
             ghost.remove();
           }
-          saveScore(score); // Save score when the game is over
+        
         }
       } else if (score == maxScore) {
         clearInterval(ghostCreate);
