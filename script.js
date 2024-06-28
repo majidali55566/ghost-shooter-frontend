@@ -211,8 +211,11 @@ function displayTopScores(scores) {
     let scoreElement = document.createElement("div");
     scoreElement.className = "top-score";
 
+    let userId = score.userId ? score.userId.rollno : "Unknown"; // Check if userId exists
+    let scoreValue = score.score;
+
     let scoreParagraph = document.createElement("h1");
-    scoreParagraph.innerText = `${score.userId.rollno}: ${score.score}`;
+    scoreParagraph.innerText = `${userId}: ${scoreValue}`;
 
     scoreElement.appendChild(scoreParagraph);
     scoresContainer.appendChild(scoreElement);
