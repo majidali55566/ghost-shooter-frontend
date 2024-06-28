@@ -155,8 +155,7 @@ ul li:hover .tooltiptext {
 #quitScreen {
   background-image: url(assets/images/quit-screen.gif);
   color: #fff;
-  filter: blur(10px);
-  background: rgba(255, 255, 255, 0.5);
+  filter: blur(5px);
 }
 #{ } #quitScreen h3 {
   margin-bottom: 7%;
