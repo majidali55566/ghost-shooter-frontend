@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
           document.querySelector(".login-status").innerHTML =
             "Login successful!";
 
-          window.location.href = `${rollno}/game.html`; // Redirect to the game page
+          window.location.href = `rollno/game.html`; // Redirect to the game page
         } else {
           document.querySelector(".login-status").innerHTML = "Login failed";
         }
