@@ -171,7 +171,7 @@ function startGame() {
 
 function saveScore(score) {
   const rollno = localStorage.getItem("rollno"); // You might want to dynamically get this based on the logged-in user
-
+  console.log(rollno);
   fetch(`https://scoreapi-z32i.onrender.com/api/scores/submit/${rollno}`, {
     method: "POST",
     headers: {
