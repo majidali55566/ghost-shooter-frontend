@@ -184,7 +184,7 @@ function saveScore(score) {
     .then((response) => response.json())
     .then((data) => {
       console.log("Score saved:", data);
-      alert("Last socre saved:", score);
+      
     })
     .catch((error) => {
       console.error("Error:", error);
