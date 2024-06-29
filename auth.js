@@ -65,13 +65,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (response.status === 400) {
           document.querySelector(".registration-message").innerHTML =
             "User is already register";
-          window.location = "/login.html";
+          window.location.href = "/login.html";
         }
 
         if (response.ok) {
           localStorage.setItem("token", data.token);
           localStorage.setItem("rollno", rollno); // Store rollno
-          window.location.href = `/${rollno}/game.html`;
+          window.location.href = `/login.html`;
           alert("Signup successful! Please login.");
         } else {
           document.querySelector(".registration-message").innerHTML =
