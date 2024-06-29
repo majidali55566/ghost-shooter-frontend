@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
           localStorage.setItem("token", data.token);
           localStorage.setItem("rollno", rollno); // Store rollno
           window.location.href = `/login.html`;
-          alert("Signup successful! Please login.");
         } else {
           document.querySelector(".registration-message").innerHTML =
             "Registerattion failed";
